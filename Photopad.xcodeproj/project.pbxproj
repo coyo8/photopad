@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		671283E8235AC373008AA55D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671283E7235AC373008AA55D /* AppDelegate.swift */; };
+		671283EA235AC373008AA55D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671283E9235AC373008AA55D /* ViewController.swift */; };
+		671283ED235AC373008AA55D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671283EB235AC373008AA55D /* Main.storyboard */; };
+		671283EF235AC375008AA55D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 671283EE235AC375008AA55D /* Assets.xcassets */; };
+		671283F2235AC375008AA55D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671283F0235AC375008AA55D /* LaunchScreen.storyboard */; };
+		671283FD235AC375008AA55D /* PhotopadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671283FC235AC375008AA55D /* PhotopadTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		671283F9235AC375008AA55D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 671283DC235AC373008AA55D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 671283E3235AC373008AA55D;
+			remoteInfo = Photopad;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		671283E4235AC373008AA55D /* Photopad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photopad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		671283E7235AC373008AA55D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		671283E9235AC373008AA55D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		671283EC235AC373008AA55D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		671283EE235AC375008AA55D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		671283F1235AC375008AA55D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		671283F3235AC375008AA55D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		671283F8235AC375008AA55D /* PhotopadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotopadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		671283FC235AC375008AA55D /* PhotopadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotopadTests.swift; sourceTree = "<group>"; };
+		671283FE235AC375008AA55D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		671283E1235AC373008AA55D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		671283F5235AC375008AA55D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		671283DB235AC373008AA55D = {
+			isa = PBXGroup;
+			children = (
+				671283E6235AC373008AA55D /* Photopad */,
+				671283FB235AC375008AA55D /* PhotopadTests */,
+				671283E5235AC373008AA55D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		671283E5235AC373008AA55D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				671283E4235AC373008AA55D /* Photopad.app */,
+				671283F8235AC375008AA55D /* PhotopadTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		671283E6235AC373008AA55D /* Photopad */ = {
+			isa = PBXGroup;
+			children = (
+				671283E7235AC373008AA55D /* AppDelegate.swift */,
+				671283E9235AC373008AA55D /* ViewController.swift */,
+				671283EB235AC373008AA55D /* Main.storyboard */,
+				671283EE235AC375008AA55D /* Assets.xcassets */,
+				671283F0235AC375008AA55D /* LaunchScreen.storyboard */,
+				671283F3235AC375008AA55D /* Info.plist */,
+			);
+			path = Photopad;
+			sourceTree = "<group>";
+		};
+		671283FB235AC375008AA55D /* PhotopadTests */ = {
+			isa = PBXGroup;
+			children = (
+				671283FC235AC375008AA55D /* PhotopadTests.swift */,
+				671283FE235AC375008AA55D /* Info.plist */,
+			);
+			path = PhotopadTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		671283E3235AC373008AA55D /* Photopad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67128401235AC375008AA55D /* Build configuration list for PBXNativeTarget "Photopad" */;
+			buildPhases = (
+				671283E0235AC373008AA55D /* Sources */,
+				671283E1235AC373008AA55D /* Frameworks */,
+				671283E2235AC373008AA55D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Photopad;
+			productName = Photopad;
+			productReference = 671283E4235AC373008AA55D /* Photopad.app */;
+			productType = "com.apple.product-type.application";
+		};
+		671283F7235AC375008AA55D /* PhotopadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67128404235AC375008AA55D /* Build configuration list for PBXNativeTarget "PhotopadTests" */;
+			buildPhases = (
+				671283F4235AC375008AA55D /* Sources */,
+				671283F5235AC375008AA55D /* Frameworks */,
+				671283F6235AC375008AA55D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				671283FA235AC375008AA55D /* PBXTargetDependency */,
+			);
+			name = PhotopadTests;
+			productName = PhotopadTests;
+			productReference = 671283F8235AC375008AA55D /* PhotopadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		671283DC235AC373008AA55D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Rudrakos;
+				TargetAttributes = {
+					671283E3235AC373008AA55D = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					671283F7235AC375008AA55D = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 671283E3235AC373008AA55D;
+					};
+				};
+			};
+			buildConfigurationList = 671283DF235AC373008AA55D /* Build configuration list for PBXProject "Photopad" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 671283DB235AC373008AA55D;
+			productRefGroup = 671283E5235AC373008AA55D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				671283E3235AC373008AA55D /* Photopad */,
+				671283F7235AC375008AA55D /* PhotopadTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		671283E2235AC373008AA55D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				671283F2235AC375008AA55D /* LaunchScreen.storyboard in Resources */,
+				671283EF235AC375008AA55D /* Assets.xcassets in Resources */,
+				671283ED235AC373008AA55D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		671283F6235AC375008AA55D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		671283E0235AC373008AA55D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				671283EA235AC373008AA55D /* ViewController.swift in Sources */,
+				671283E8235AC373008AA55D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		671283F4235AC375008AA55D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				671283FD235AC375008AA55D /* PhotopadTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		671283FA235AC375008AA55D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 671283E3235AC373008AA55D /* Photopad */;
+			targetProxy = 671283F9235AC375008AA55D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		671283EB235AC373008AA55D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				671283EC235AC373008AA55D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		671283F0235AC375008AA55D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				671283F1235AC375008AA55D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		671283FF235AC375008AA55D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		67128400235AC375008AA55D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		67128402235AC375008AA55D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KL4YU6W3EA;
+				INFOPLIST_FILE = Photopad/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rudrakos.Photopad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		67128403235AC375008AA55D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KL4YU6W3EA;
+				INFOPLIST_FILE = Photopad/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rudrakos.Photopad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		67128405235AC375008AA55D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KL4YU6W3EA;
+				INFOPLIST_FILE = PhotopadTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rudrakos.PhotopadTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Photopad.app/Photopad";
+			};
+			name = Debug;
+		};
+		67128406235AC375008AA55D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KL4YU6W3EA;
+				INFOPLIST_FILE = PhotopadTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rudrakos.PhotopadTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Photopad.app/Photopad";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		671283DF235AC373008AA55D /* Build configuration list for PBXProject "Photopad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				671283FF235AC375008AA55D /* Debug */,
+				67128400235AC375008AA55D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67128401235AC375008AA55D /* Build configuration list for PBXNativeTarget "Photopad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67128402235AC375008AA55D /* Debug */,
+				67128403235AC375008AA55D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67128404235AC375008AA55D /* Build configuration list for PBXNativeTarget "PhotopadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67128405235AC375008AA55D /* Debug */,
+				67128406235AC375008AA55D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 671283DC235AC373008AA55D /* Project object */;
+}
