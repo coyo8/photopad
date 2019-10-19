@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		671283E8235AC373008AA55D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671283E7235AC373008AA55D /* AppDelegate.swift */; };
-		671283EA235AC373008AA55D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671283E9235AC373008AA55D /* ViewController.swift */; };
+		671283EA235AC373008AA55D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671283E9235AC373008AA55D /* HomeViewController.swift */; };
 		671283ED235AC373008AA55D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671283EB235AC373008AA55D /* Main.storyboard */; };
 		671283EF235AC375008AA55D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 671283EE235AC375008AA55D /* Assets.xcassets */; };
 		671283F2235AC375008AA55D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671283F0235AC375008AA55D /* LaunchScreen.storyboard */; };
 		671283FD235AC375008AA55D /* PhotopadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671283FC235AC375008AA55D /* PhotopadTests.swift */; };
+		67C6B19B235AC6FC0020FFAA /* HomeViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C6B19A235AC6FC0020FFAA /* HomeViewControllerDataSource.swift */; };
+		67C6B19D235AD15D0020FFAA /* HomePhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C6B19C235AD15D0020FFAA /* HomePhotoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +30,7 @@
 /* Begin PBXFileReference section */
 		671283E4235AC373008AA55D /* Photopad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photopad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		671283E7235AC373008AA55D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		671283E9235AC373008AA55D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		671283E9235AC373008AA55D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		671283EC235AC373008AA55D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		671283EE235AC375008AA55D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		671283F1235AC375008AA55D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +38,8 @@
 		671283F8235AC375008AA55D /* PhotopadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotopadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		671283FC235AC375008AA55D /* PhotopadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotopadTests.swift; sourceTree = "<group>"; };
 		671283FE235AC375008AA55D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67C6B19A235AC6FC0020FFAA /* HomeViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerDataSource.swift; sourceTree = "<group>"; };
+		67C6B19C235AD15D0020FFAA /* HomePhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePhotoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +82,13 @@
 			isa = PBXGroup;
 			children = (
 				671283E7235AC373008AA55D /* AppDelegate.swift */,
-				671283E9235AC373008AA55D /* ViewController.swift */,
+				671283E9235AC373008AA55D /* HomeViewController.swift */,
 				671283EB235AC373008AA55D /* Main.storyboard */,
 				671283EE235AC375008AA55D /* Assets.xcassets */,
 				671283F0235AC375008AA55D /* LaunchScreen.storyboard */,
 				671283F3235AC375008AA55D /* Info.plist */,
+				67C6B19A235AC6FC0020FFAA /* HomeViewControllerDataSource.swift */,
+				67C6B19C235AD15D0020FFAA /* HomePhotoCell.swift */,
 			);
 			path = Photopad;
 			sourceTree = "<group>";
@@ -197,8 +203,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				671283EA235AC373008AA55D /* ViewController.swift in Sources */,
+				671283EA235AC373008AA55D /* HomeViewController.swift in Sources */,
+				67C6B19D235AD15D0020FFAA /* HomePhotoCell.swift in Sources */,
 				671283E8235AC373008AA55D /* AppDelegate.swift in Sources */,
+				67C6B19B235AC6FC0020FFAA /* HomeViewControllerDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

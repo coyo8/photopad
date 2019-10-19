@@ -13,9 +13,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
 
-
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
+
+    let bounds = UIScreen.main.bounds
+    window = UIWindow(frame: bounds)
+
+    // setup navigation controller, if the initial viewcontroller have
+    // lot of dependencies, let switch the responsibility to the router
+    let homeViewController = HomeViewController(collectionViewLayout: UICollectionViewFlowLayout())
+    let rootViewController = UINavigationController(rootViewController: homeViewController)
+    window?.rootViewController = rootViewController
+    window?.makeKeyAndVisible()
+
     return true
   }
 
