@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		671283E8235AC373008AA55D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671283E7235AC373008AA55D /* AppDelegate.swift */; };
 		671283EA235AC373008AA55D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671283E9235AC373008AA55D /* HomeViewController.swift */; };
-		671283ED235AC373008AA55D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671283EB235AC373008AA55D /* Main.storyboard */; };
 		671283EF235AC375008AA55D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 671283EE235AC375008AA55D /* Assets.xcassets */; };
 		671283F2235AC375008AA55D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671283F0235AC375008AA55D /* LaunchScreen.storyboard */; };
 		671283FD235AC375008AA55D /* PhotopadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671283FC235AC375008AA55D /* PhotopadTests.swift */; };
@@ -33,7 +32,6 @@
 		671283E4235AC373008AA55D /* Photopad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photopad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		671283E7235AC373008AA55D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		671283E9235AC373008AA55D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		671283EC235AC373008AA55D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		671283EE235AC375008AA55D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		671283F1235AC375008AA55D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		671283F3235AC375008AA55D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,16 +83,8 @@
 		671283E6235AC373008AA55D /* Photopad */ = {
 			isa = PBXGroup;
 			children = (
-				671283E7235AC373008AA55D /* AppDelegate.swift */,
-				671283E9235AC373008AA55D /* HomeViewController.swift */,
-				671283EB235AC373008AA55D /* Main.storyboard */,
-				671283EE235AC375008AA55D /* Assets.xcassets */,
-				671283F0235AC375008AA55D /* LaunchScreen.storyboard */,
-				671283F3235AC375008AA55D /* Info.plist */,
-				67C6B19A235AC6FC0020FFAA /* HomeViewControllerDataSource.swift */,
-				67C6B19C235AD15D0020FFAA /* HomePhotoCell.swift */,
-				67C6B19E235AD55B0020FFAA /* PhotoService.swift */,
-				67C6B1A0235ADAA20020FFAA /* NetworkKit.swift */,
+				67D78D702361700700A738CB /* Resource */,
+				67D78D6F23616FFB00A738CB /* Source */,
 			);
 			path = Photopad;
 			sourceTree = "<group>";
@@ -106,6 +96,69 @@
 				671283FE235AC375008AA55D /* Info.plist */,
 			);
 			path = PhotopadTests;
+			sourceTree = "<group>";
+		};
+		67D78D6F23616FFB00A738CB /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				671283E7235AC373008AA55D /* AppDelegate.swift */,
+				67D78F292361832100A738CB /* DetailView */,
+				67D78F282361831700A738CB /* Home */,
+				67D78F272361830500A738CB /* Component */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		67D78D702361700700A738CB /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				671283F0235AC375008AA55D /* LaunchScreen.storyboard */,
+				671283EE235AC375008AA55D /* Assets.xcassets */,
+				671283F3235AC375008AA55D /* Info.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		67D78F26236182E800A738CB /* NetworkKit */ = {
+			isa = PBXGroup;
+			children = (
+				67C6B19E235AD55B0020FFAA /* PhotoService.swift */,
+				67C6B1A0235ADAA20020FFAA /* NetworkKit.swift */,
+			);
+			path = NetworkKit;
+			sourceTree = "<group>";
+		};
+		67D78F272361830500A738CB /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				67D78F2A2361837F00A738CB /* ViewKit */,
+				67D78F26236182E800A738CB /* NetworkKit */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		67D78F282361831700A738CB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				67C6B19C235AD15D0020FFAA /* HomePhotoCell.swift */,
+				67C6B19A235AC6FC0020FFAA /* HomeViewControllerDataSource.swift */,
+				671283E9235AC373008AA55D /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		67D78F292361832100A738CB /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
+		67D78F2A2361837F00A738CB /* ViewKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,7 +244,6 @@
 			files = (
 				671283F2235AC375008AA55D /* LaunchScreen.storyboard in Resources */,
 				671283EF235AC375008AA55D /* Assets.xcassets in Resources */,
-				671283ED235AC373008AA55D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,14 +289,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		671283EB235AC373008AA55D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				671283EC235AC373008AA55D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		671283F0235AC375008AA55D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -378,7 +422,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KL4YU6W3EA;
-				INFOPLIST_FILE = Photopad/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Photopad/Resource/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -386,7 +431,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rudrakos.Photopad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -396,7 +441,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KL4YU6W3EA;
-				INFOPLIST_FILE = Photopad/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Photopad/Resource/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -404,7 +450,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rudrakos.Photopad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

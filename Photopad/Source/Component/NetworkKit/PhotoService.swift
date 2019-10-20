@@ -21,7 +21,7 @@ public final class PhotoServiceImp: PhotoService {
        decoder: JSONDecoder = JSONDecoder()) {
     self.urlSession = urlSession
     self.decoder = decoder
-  }Ç
+  }
 
   public func fetchPhotosURLs<T: Decodable>(url: String,
                                             completion: @escaping (Result<T, NetworkError>) -> Void) {
