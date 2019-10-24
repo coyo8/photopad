@@ -4,12 +4,13 @@ A iOS app showing flickr photos with keyword search
 ![overview](https://github.com/coyo8/photopad/blob/master/photopad.gif)
 
 ### Running:
-First of all; clone the repo
+First of all; you will need to clone the repo
+
+```bash
 $ git clone https://github.com/coyo8/photopad.git
+```
 
-Now just click on the `Photopad.xcodeproj` and it will open the project.
-
-Now press CMD+R to run the project in the simulator or a device if it is connected.
+After that, just click on the `Photopad.xcodeproj` and it will open the project and then press `CMD+R` to run the project in the simulator or a device if it is connected.
 
 ### Architecture:
 
@@ -17,11 +18,11 @@ The Photopad App uses MVVM with coordinator pattern architecture.
 
 I have separated the projects into components and have created a clear boundaries of responsibilities between objects
 
-#### Coordinators: They handle the routing or navigation logic. Also our app is small and so they act as a builder also i.e. creating all the dependencies objects and passing them
+**Coordinators**: They handle the routing or navigation logic. Also our app is small and so they act as a builder also i.e. creating all the dependencies objects and passing them
 
-#### ViewModel: This encapsulates the data structure and communication between ViewController and model layer.
+**ViewModel**: This encapsulates the data structure and communication between ViewController and model layer.
 
-#### Interactor: In this project, interactor is owned by ViewController and not other way around and I kept it this way for the simplicity unless it would have taken lot of time and also would require third party dependencies like RX.
+**Interactor**: In this project, interactor is owned by ViewController and not other way around and I kept it this way for the simplicity unless it would have taken lot of time and also would require third party dependencies like RX.
 
 What Interactor does is, it take cares of the business logic and accordingly communicates with view controller with delegates pattern.
 
@@ -57,5 +58,5 @@ I have tested the service layer and viewModel for home controller page
 * Accessibility, I haven’t done anything on this part. This bring more user into ecosystem
 * I haven’t handled the state restoration 
 * Also, I am not handling cases related to Application life cycle like what should it do in background and what would be expected behaviour on different cycles transitions.
+* Environment separation for debug, staging and production.
 * Finally, I would have looked into adding more functionality like heart button, saving the photo to camera roll etc.
-
