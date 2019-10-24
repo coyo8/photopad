@@ -19,6 +19,7 @@ public enum NetworkError: Error {
 }
 
 
+
 // This way we can test our network layer
 // as we can provide our mock implmentation
 public protocol NetworkKit {

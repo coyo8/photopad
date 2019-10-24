@@ -20,6 +20,7 @@
 		67D78F2E2361951F00A738CB /* Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D78F2D2361951F00A738CB /* Autolayout.swift */; };
 		67D78F302361977900A738CB /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D78F2F2361977900A738CB /* ImageCache.swift */; };
 		67D78F3223619E6A00A738CB /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D78F3123619E6A00A738CB /* PhotoModel.swift */; };
+		67D78F342361D2A900A738CB /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D78F332361D2A900A738CB /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		67D78F2D2361951F00A738CB /* Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Autolayout.swift; sourceTree = "<group>"; };
 		67D78F2F2361977900A738CB /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		67D78F3123619E6A00A738CB /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
+		67D78F332361D2A900A738CB /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 				67C6B19C235AD15D0020FFAA /* HomePhotoCell.swift */,
 				67C6B19A235AC6FC0020FFAA /* HomeControllerInteractor.swift */,
 				671283E9235AC373008AA55D /* HomeViewController.swift */,
+				67D78F332361D2A900A738CB /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67C6B19F235AD55B0020FFAA /* PhotoService.swift in Sources */,
+				67D78F342361D2A900A738CB /* HomeViewModel.swift in Sources */,
 				671283EA235AC373008AA55D /* HomeViewController.swift in Sources */,
 				67D78F2E2361951F00A738CB /* Autolayout.swift in Sources */,
 				67D78F302361977900A738CB /* ImageCache.swift in Sources */,

@@ -14,18 +14,21 @@ public struct HomePhotoCellConstant {
 }
 
 class HomePhotoCell: UICollectionViewCell {
-  private let imageView: UIImageView = {
+  let imageView: UIImageView = {
     let iv = UIImageView()
     iv.contentMode = .scaleAspectFill
     iv.clipsToBounds = true
-    iv.image = #imageLiteral(resourceName: "image_placeholder")
+    iv.layer.cornerRadius = 5.0
+    iv.image = UIImage(named: "placeholder")
     return iv
   }()
 
   override init(frame: CGRect) {
     super.init(frame: frame)
 
+    imageView.autolayout()
     addSubview(imageView)
+    imageView.toFit(self)
   }
 
   required init?(coder aDecoder: NSCoder) {

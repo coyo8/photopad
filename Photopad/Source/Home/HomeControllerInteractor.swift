@@ -11,6 +11,7 @@ import UIKit
 public protocol HomeViewInteractorProtocol: class {
   func didFinishFetching(photos: [Photo])
   func showErrorAlert(error: NetworkError)
+  func didFinishLoadingImage(image: UIImage, for url: String)
 }
 
 // Keeping dataSource independent from view controller makes
@@ -37,8 +38,20 @@ final class HomeControllerInteractor: NSObject {
       }
     }
   }
-}
 
+  func loadImage(with url: String) {
+    photoService.fetchPhoto(with: url) { [weak self] result in
+      guard let this = self else { return }
+
+      switch result {
+      case .success(let anyImage):
+        this.delegate?.didFinishLoadingImage(image: anyImage.image, for: url)
+      case .failure:
+        this.delegate?.didFinishLoadingImage(image: UIImage(named: "placeHolder")!, for: url)
+      }
+    }
+  }
+}
 
 
 

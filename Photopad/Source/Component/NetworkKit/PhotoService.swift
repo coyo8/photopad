@@ -24,7 +24,7 @@ struct Constant {
     "method" : "flickr.photos.search",
     "api_key" : FlickrAPIConfig.apiKey,
     "sort" : "relevance",
-    "per_page" : "10",
+    "per_page" : "20",
     "format" : "json",
     "nojsoncallback" : "1",
     "extras" : "url_m"
@@ -78,14 +78,14 @@ public final class PhotoServiceImp: PhotoService {
     let request = URLRequest(url: url, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 60.0)
 
     let decoder: (Data) throws -> PhotoModel = { data in
+//      print(String(data: data, encoding: .utf8)!)
       do {
         let model = try JSONDecoder().decode(PhotoModel.self, from: data)
         return model
       } catch let error {
         print(error)
+        throw NetworkError.decodingFailed
       }
-
-      throw NetworkError.decodingFailed
     }
 
     networkKit.send(request, decoder: decoder) { result in

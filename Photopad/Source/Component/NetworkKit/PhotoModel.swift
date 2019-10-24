@@ -18,10 +18,10 @@ public struct Photos: Codable {
 }
 
 public struct Photo: Codable {
-  let url: String
+  var url: String?
   let id: String
-  let height: Int
-  let width: Int
+  let height: Int?
+  let width: Int?
 
   enum CodingKeys: String, CodingKey {
     case id
