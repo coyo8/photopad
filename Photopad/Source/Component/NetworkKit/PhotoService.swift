@@ -32,7 +32,6 @@ struct Constant {
 }
 
 
-
 // This service handles the flickr requests
 public protocol PhotoService {
   func fetchPhotosURLs(with query: String,

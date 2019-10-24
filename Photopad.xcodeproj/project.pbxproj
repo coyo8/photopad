@@ -17,6 +17,8 @@
 		67C6B19F235AD55B0020FFAA /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C6B19E235AD55B0020FFAA /* PhotoService.swift */; };
 		67C6B1A1235ADAA20020FFAA /* NetworkKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C6B1A0235ADAA20020FFAA /* NetworkKit.swift */; };
 		67D78F2C236187F900A738CB /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D78F2B236187F900A738CB /* Alerts.swift */; };
+		67D78F2E2361951F00A738CB /* Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D78F2D2361951F00A738CB /* Autolayout.swift */; };
+		67D78F302361977900A738CB /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D78F2F2361977900A738CB /* ImageCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		67C6B19E235AD55B0020FFAA /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
 		67C6B1A0235ADAA20020FFAA /* NetworkKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkKit.swift; sourceTree = "<group>"; };
 		67D78F2B236187F900A738CB /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		67D78F2D2361951F00A738CB /* Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Autolayout.swift; sourceTree = "<group>"; };
+		67D78F2F2361977900A738CB /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,7 @@
 			children = (
 				67C6B19E235AD55B0020FFAA /* PhotoService.swift */,
 				67C6B1A0235ADAA20020FFAA /* NetworkKit.swift */,
+				67D78F2F2361977900A738CB /* ImageCache.swift */,
 			);
 			path = NetworkKit;
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				67D78F2B236187F900A738CB /* Alerts.swift */,
+				67D78F2D2361951F00A738CB /* Autolayout.swift */,
 			);
 			path = ViewKit;
 			sourceTree = "<group>";
@@ -266,6 +272,8 @@
 			files = (
 				67C6B19F235AD55B0020FFAA /* PhotoService.swift in Sources */,
 				671283EA235AC373008AA55D /* HomeViewController.swift in Sources */,
+				67D78F2E2361951F00A738CB /* Autolayout.swift in Sources */,
+				67D78F302361977900A738CB /* ImageCache.swift in Sources */,
 				67C6B19D235AD15D0020FFAA /* HomePhotoCell.swift in Sources */,
 				671283E8235AC373008AA55D /* AppDelegate.swift in Sources */,
 				67C6B19B235AC6FC0020FFAA /* HomeViewControllerDataSource.swift in Sources */,

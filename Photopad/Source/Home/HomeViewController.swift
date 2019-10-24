@@ -16,7 +16,7 @@ class HomeViewController: UICollectionViewController {
 
     collectionView.delegate = self
     collectionView.register(UICollectionViewCell.self,
-                            forCellWithReuseIdentifier: HomeCellConstant.cellId)
+                            forCellWithReuseIdentifier: HomePhotoCellConstant.cellId)
   }
 
   override func viewDidLoad() {

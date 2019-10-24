@@ -6,8 +6,34 @@
 //  Copyright © 2019 Rudrakos. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-public struct HomeCellConstant {
-  static let cellId = "com.homecell"
+public struct HomePhotoCellConstant {
+  static let cellId = "com.homephotocell"
+}
+
+class HomePhotoCell: UICollectionViewCell {
+  private let imageView: UIImageView = {
+    let iv = UIImageView()
+    iv.contentMode = .scaleAspectFill
+    iv.clipsToBounds = true
+    iv.image = #imageLiteral(resourceName: "image_placeholder")
+    return iv
+  }()
+
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+
+    addSubview(imageView)
+  }
+
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+
+  override func prepareForReuse() {
+    super.prepareForReuse()
+
+    imageView.image = nil
+  }
 }
