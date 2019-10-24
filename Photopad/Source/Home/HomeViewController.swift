@@ -9,6 +9,8 @@
 import UIKit
 
 class HomeViewController: UICollectionViewController {
+  let interactor = HomeControllerInteractor()
+  var viewModel = [Photo]()
 
   override func loadView() {
     super.loadView()
@@ -26,27 +28,16 @@ class HomeViewController: UICollectionViewController {
 
     // setup the datasource
     collectionView.dataSource = self
-    photos()
-  }
+    interactor.delegate = self
 
-  func photos() {
-    let photoService = PhotoServiceImp()
-
-    photoService.fetchPhotosURLs(with: "dogs") { result in
-      switch result {
-      case .success(let photos):
-        print(photos)
-      case .failure(let error):
-        print(error)
-      }
-    }
+    interactor.searchPhotos(with: "dog")
   }
 }
 
 
 extension HomeViewController {
   override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 10
+    return viewModel.count
   }
 
   override func collectionView(_ collectionView: UICollectionView,
@@ -54,5 +45,21 @@ extension HomeViewController {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomePhotoCellConstant.cellId, for: indexPath)
     cell.backgroundColor = .red
     return cell
+  }
+}
+
+extension HomeViewController: HomeViewInteractorProtocol {
+  func didFinishFetching(photos: [Photo]) {
+    viewModel = photos
+    DispatchQueue.main.async {
+      self.collectionView.reloadData()
+    }
+  }
+
+  func showErrorAlert(error: NetworkError) {
+    DispatchQueue.main.async {
+      let alert = UIKitHelper.displayAlert(with: error.localizedDescription)
+      self.present(alert, animated: true, completion: nil)
+    }
   }
 }
