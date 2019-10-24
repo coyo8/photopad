@@ -18,6 +18,8 @@ public enum NetworkError: Error {
 }
 
 
+// This way we can test our network layer
+// as we can provide our mock implmentation
 public protocol NetworkKit {
   func send<T: Decodable>(_ r: URLRequest, decoder: ((Data) throws -> (T))?,
                           completion: @escaping (Result<T, NetworkError>) -> Void)
@@ -30,8 +32,8 @@ final class NetworkKitImp: NetworkKit {
     self.urlSession = urlSession
   }
 
-  func send<T>(_ r: URLRequest, decoder: ((Data) throws -> (T))? = nil,
-               completion: @escaping (Result<T, NetworkError>) -> Void) where T : Decodable {
+  func send<T: Decodable>(_ r: URLRequest, decoder: ((Data) throws -> (T))? = nil,
+                          completion: @escaping (Result<T, NetworkError>) -> Void) {
 
     urlSession.dataTask(with: r) { (data, response, error) in
 

@@ -27,6 +27,20 @@ class HomeViewController: UICollectionViewController {
 
     // setup the datasource
     collectionView.dataSource = dataSource
+    photos()
+  }
+
+  func photos() {
+    let photoService = PhotoServiceImp()
+
+    photoService.fetchPhotosURLs(with: "dogs") { result in
+      switch result {
+      case .success(let photos):
+        print(photos)
+      case .failure(let error):
+        print(error)
+      }
+    }
   }
 }
 
