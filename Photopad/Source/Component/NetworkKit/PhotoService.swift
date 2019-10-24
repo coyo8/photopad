@@ -36,13 +36,17 @@ struct Constant {
 public protocol PhotoService {
   func fetchPhotosURLs(with query: String,
                        completion: @escaping (Result<PhotoModel, NetworkError>) -> Void)
+  func fetchPhoto(with url: String,
+                  completion: @escaping (Result<AnyImage, NetworkError>) -> Void)
 }
 
 public final class PhotoServiceImp: PhotoService {
   let networkKit: NetworkKit
+  var cache: ImageCacherService
 
-  init(networkKit: NetworkKit = NetworkKitImp()) {
+  init(networkKit: NetworkKit = NetworkKitImp(), cache: ImageCacherService = ImageCacher.shared) {
     self.networkKit = networkKit
+    self.cache = cache
   }
 
   private func queryItems(with parameters: [String : String]) -> [URLQueryItem] {
@@ -90,6 +94,35 @@ public final class PhotoServiceImp: PhotoService {
         completion(.success(photos))
       case .failure(let error):
         completion(.failure(error))
+      }
+    }
+  }
+
+  public func fetchPhoto(with url: String, completion: @escaping (Result<AnyImage, NetworkError>) -> Void) {
+    guard let urlObject = URL(string: url) else {
+      completion(.failure(.invalidURL))
+      return
+    }
+
+    if let image = cache.getImage(for: url as NSString) {
+      completion(.success(AnyImage(image: image)))
+    } else {
+      let decoder: (Data) throws -> AnyImage = { data in
+        if let image = UIImage(data: data) { return AnyImage(image: image) }
+
+        throw NetworkError.imageNotFound
+      }
+
+      networkKit.send(URLRequest(url: urlObject), decoder: decoder) { [weak self] result in
+        guard let this = self else { return }
+
+        switch result {
+        case .success(let image):
+          this.cache.save(image: image.image, for: url as NSString)
+          completion(.success(image))
+        case .failure(let error):
+          completion(.failure(error))
+        }
       }
     }
   }

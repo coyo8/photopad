@@ -15,6 +15,7 @@ public enum NetworkError: Error {
   case decodingFailed
   case dataNotFound
   case decoderNotFound
+  case imageNotFound
 }
 
 
