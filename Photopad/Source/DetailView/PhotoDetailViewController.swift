@@ -9,7 +9,6 @@
 import UIKit
 
 class PhotoDetailViewController: UIViewController {
-
   private lazy var scrollView: UIScrollView = {
     let sv = UIScrollView()
     sv.maximumZoomScale = 3.0
@@ -32,9 +31,9 @@ class PhotoDetailViewController: UIViewController {
     return iv
   }()
 
-  // MARK:- Life Cycle methods
   override func viewDidLoad() {
     super.viewDidLoad()
+
     view.backgroundColor = .black
     navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "baseline_save_white_24pt"), style: .plain,
                                                         target: self,
@@ -42,8 +41,16 @@ class PhotoDetailViewController: UIViewController {
     setupViews()
   }
 
-  // MARK:- Screen layout methods
-  fileprivate func setupViews(){
+  init(photo: UIImage) {
+    photoImageView.image = photo
+    super.init(nibName: nil, bundle: nil)
+  }
+
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+
+  func setupViews() {
     let guide = view.safeAreaLayoutGuide
     scrollView.autolayout()
     photoImageView.autolayout()
@@ -60,7 +67,6 @@ class PhotoDetailViewController: UIViewController {
     photoImageView.toFit(scrollView)
   }
 
-  // MARK:- Handling methods
   @objc private func handleSave() {
     let alert = UIKitHelper.displayAlert(with: "TODO: Saving image to camera roll")
     present(alert, animated: true, completion: nil)

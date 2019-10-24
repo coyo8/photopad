@@ -23,4 +23,9 @@ class HomeCoordinator : BaseCoordinator {
 
     navigationController?.pushViewController(homeViewController, animated: true)
   }
+
+  func showPhotoDetail(_ photo: UIImage, in navigationController: UINavigationController?) {
+    let photoDetailCoordinator = PhotoDetailCoordinator(photo: photo, navigationController: navigationController)
+    self.store(coordinator: photoDetailCoordinator)
+  }
 }

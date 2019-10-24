@@ -12,7 +12,6 @@ protocol Coordinator : class {
 }
 
 extension Coordinator {
-
   func store(coordinator: Coordinator) {
     childCoordinators.append(coordinator)
   }
