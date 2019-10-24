@@ -15,12 +15,18 @@ class PhotoDetailCoordinator : BaseCoordinator {
   init(photo: UIImage, navigationController: UINavigationController?) {
     self.navigationController = navigationController
     self.photo = photo
+
     super.init()
   }
 
   override func start() {
     let detailViewController = PhotoDetailViewController(photo: photo)
-    
+
+    // I am not creating a view model for just photo
+    detailViewController.didTapBack = { [weak self] in
+      self?.isCompleted?()
+    }
+
     navigationController?.pushViewController(detailViewController, animated: true)
   }
 }

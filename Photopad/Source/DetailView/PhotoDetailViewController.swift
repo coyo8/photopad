@@ -9,6 +9,9 @@
 import UIKit
 
 class PhotoDetailViewController: UIViewController {
+
+  var didTapBack: (() -> Void)?
+
   private lazy var scrollView: UIScrollView = {
     let sv = UIScrollView()
     sv.maximumZoomScale = 3.0
@@ -38,6 +41,10 @@ class PhotoDetailViewController: UIViewController {
     navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action,
                                                         target: self,
                                                         action: #selector(handleSave))
+    navigationItem.leftBarButtonItem = UIBarButtonItem(title: "< Back",
+                                                       style: .plain,
+                                                       target: self,
+                                                       action: #selector(backPressed))
     setupViews()
   }
 
@@ -71,6 +78,12 @@ class PhotoDetailViewController: UIViewController {
   @objc private func handleSave() {
     let alert = UIKitHelper.displayAlert(with: "TODO: Saving image to camera roll")
     present(alert, animated: true, completion: nil)
+  }
+
+  @objc private func backPressed() {
+    _ = navigationController?.popViewController(animated: true)
+    
+    didTapBack?()
   }
 }
 
