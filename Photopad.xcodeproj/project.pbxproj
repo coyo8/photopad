@@ -21,6 +21,11 @@
 		67D78F302361977900A738CB /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D78F2F2361977900A738CB /* ImageCache.swift */; };
 		67D78F3223619E6A00A738CB /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D78F3123619E6A00A738CB /* PhotoModel.swift */; };
 		67D78F342361D2A900A738CB /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D78F332361D2A900A738CB /* HomeViewModel.swift */; };
+		67D78F36236210C000A738CB /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D78F35236210C000A738CB /* PhotoDetailViewController.swift */; };
+		67D78F39236212F700A738CB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D78F38236212F700A738CB /* Coordinator.swift */; };
+		67D78F3B2362137000A738CB /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D78F3A2362137000A738CB /* RootCoordinator.swift */; };
+		67D78F3D236213E500A738CB /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D78F3C236213E500A738CB /* HomeCoordinator.swift */; };
+		67D78F3F236213FF00A738CB /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D78F3E236213FF00A738CB /* DetailCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +57,11 @@
 		67D78F2F2361977900A738CB /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		67D78F3123619E6A00A738CB /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 		67D78F332361D2A900A738CB /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		67D78F35236210C000A738CB /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		67D78F38236212F700A738CB /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		67D78F3A2362137000A738CB /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		67D78F3C236213E500A738CB /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		67D78F3E236213FF00A738CB /* DetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +153,7 @@
 		67D78F272361830500A738CB /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				67D78F37236212E500A738CB /* Coordinator */,
 				67D78F2A2361837F00A738CB /* ViewKit */,
 				67D78F26236182E800A738CB /* NetworkKit */,
 			);
@@ -156,6 +167,7 @@
 				67C6B19A235AC6FC0020FFAA /* HomeControllerInteractor.swift */,
 				671283E9235AC373008AA55D /* HomeViewController.swift */,
 				67D78F332361D2A900A738CB /* HomeViewModel.swift */,
+				67D78F3C236213E500A738CB /* HomeCoordinator.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -163,6 +175,8 @@
 		67D78F292361832100A738CB /* DetailView */ = {
 			isa = PBXGroup;
 			children = (
+				67D78F35236210C000A738CB /* PhotoDetailViewController.swift */,
+				67D78F3E236213FF00A738CB /* DetailCoordinator.swift */,
 			);
 			path = DetailView;
 			sourceTree = "<group>";
@@ -174,6 +188,15 @@
 				67D78F2D2361951F00A738CB /* Autolayout.swift */,
 			);
 			path = ViewKit;
+			sourceTree = "<group>";
+		};
+		67D78F37236212E500A738CB /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				67D78F38236212F700A738CB /* Coordinator.swift */,
+				67D78F3A2362137000A738CB /* RootCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,10 +301,15 @@
 			files = (
 				67C6B19F235AD55B0020FFAA /* PhotoService.swift in Sources */,
 				67D78F342361D2A900A738CB /* HomeViewModel.swift in Sources */,
+				67D78F3D236213E500A738CB /* HomeCoordinator.swift in Sources */,
+				67D78F39236212F700A738CB /* Coordinator.swift in Sources */,
 				671283EA235AC373008AA55D /* HomeViewController.swift in Sources */,
 				67D78F2E2361951F00A738CB /* Autolayout.swift in Sources */,
 				67D78F302361977900A738CB /* ImageCache.swift in Sources */,
+				67D78F3B2362137000A738CB /* RootCoordinator.swift in Sources */,
 				67C6B19D235AD15D0020FFAA /* HomePhotoCell.swift in Sources */,
+				67D78F3F236213FF00A738CB /* DetailCoordinator.swift in Sources */,
+				67D78F36236210C000A738CB /* PhotoDetailViewController.swift in Sources */,
 				671283E8235AC373008AA55D /* AppDelegate.swift in Sources */,
 				67C6B19B235AC6FC0020FFAA /* HomeControllerInteractor.swift in Sources */,
 				67D78F2C236187F900A738CB /* Alerts.swift in Sources */,

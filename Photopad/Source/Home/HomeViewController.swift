@@ -10,8 +10,8 @@ import UIKit
 
 
 class HomeViewController: UICollectionViewController {
-  let interactor = HomeControllerInteractor()
-  var viewModel = HomeViewModel()
+  let interactor: HomeControllerInteractor
+  let viewModel: HomeViewModel
 
   private lazy var searchBar: UISearchBar = {
     let sb = UISearchBar(frame: .zero)
@@ -33,6 +33,16 @@ class HomeViewController: UICollectionViewController {
     ai.hidesWhenStopped = true
     return ai
   }()
+
+  init(viewModel: HomeViewModel, interactor: HomeControllerInteractor) {
+    self.interactor = interactor
+    self.viewModel = viewModel
+    super.init(collectionViewLayout: UICollectionViewFlowLayout())
+  }
+
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
 
   override func loadView() {
     super.loadView()
@@ -85,6 +95,10 @@ extension HomeViewController {
       cell.layoutIfNeeded()
     }
     return cell
+  }
+
+  override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    
   }
 }
 
@@ -141,7 +155,6 @@ extension HomeViewController: HomeViewInteractorProtocol {
   func didFinishFetching(photos: [Photo]) {
     // update the viewModel and reload collection
     // view
-//    print(viewModel.urls)
     self.viewModel.updateAll(with: photos)
 
     DispatchQueue.main.async {
