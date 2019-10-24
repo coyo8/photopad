@@ -161,7 +161,6 @@ extension HomeViewController: HomeViewInteractorProtocol {
     // update the viewModel and reload collection
     // view
     self.viewModel.updateAll(with: photos)
-
     DispatchQueue.main.async {
       self.collectionView.reloadData()
     }

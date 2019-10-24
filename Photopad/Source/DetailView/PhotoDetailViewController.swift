@@ -82,7 +82,7 @@ class PhotoDetailViewController: UIViewController {
 
   @objc private func backPressed() {
     _ = navigationController?.popViewController(animated: true)
-    
+
     didTapBack?()
   }
 }
