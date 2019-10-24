@@ -9,26 +9,77 @@
 import XCTest
 @testable import Photopad
 
+struct MockPhotoModel {
+  func getModel() -> PhotoModel {
+    let photo = Photo(url: "https://mockphoto.com",
+                      id: "id",
+                      height: 20,
+                      width: 10)
+    let photos = Photos(photo: [photo])
+    return PhotoModel(photos: photos)
+  }
+}
+
+class MockPhotoService: PhotoService {
+  var isPhotoURLsSuccess = false
+  func fetchPhotosURLs(with query: String, completion: @escaping (Result<PhotoModel, NetworkError>) -> Void) {
+    if isPhotoURLsSuccess {
+      let model = MockPhotoModel().getModel()
+      completion(.success(model))
+    } else {
+      completion(.failure(NetworkError.dataNotFound))
+    }
+  }
+
+  var isPhotoSuccess = false
+  func fetchPhoto(with url: String, completion: @escaping (Result<AnyImage, NetworkError>) -> Void) {
+    if isPhotoSuccess {
+      completion(.success(AnyImage(image: UIImage())))
+    } else {
+      completion(.failure(NetworkError.dataNotFound))
+    }
+  }
+}
+
+
 class PhotopadTests: XCTestCase {
+  override func setUp() {
+    super.setUp()
+  }
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+  func testFetchURLsSuccess() {
+    // given
+    let service = MockPhotoService()
+
+    // when
+    service.isPhotoURLsSuccess = true
+
+    // then
+    service.fetchPhotosURLs(with: "hello") { (result: Result<PhotoModel, NetworkError>) -> Void in
+      switch result {
+      case .success(let val):
+        XCTAssertNotNil(val.photos.photo[0].url)
+      case .failure:
+        XCTFail()
+      }
     }
+  }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+  func testFetchTransactionFailure() {
+    // given
+    let service = MockPhotoService()
+
+    // when
+    service.isPhotoURLsSuccess = false
+
+    // then
+    service.fetchPhotosURLs(with: "hello") { (result: Result<PhotoModel, NetworkError>) -> Void in
+      switch result {
+      case .success:
+        XCTFail()
+      case .failure(let error):
+        XCTAssertNoThrow(error)
+      }
     }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
+  }
 }

@@ -12,6 +12,7 @@
 		671283EF235AC375008AA55D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 671283EE235AC375008AA55D /* Assets.xcassets */; };
 		671283F2235AC375008AA55D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671283F0235AC375008AA55D /* LaunchScreen.storyboard */; };
 		671283FD235AC375008AA55D /* PhotopadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671283FC235AC375008AA55D /* PhotopadTests.swift */; };
+		67369800236235C8009EADEB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 673697FF236235C8009EADEB /* XCTest.framework */; };
 		67C6B19B235AC6FC0020FFAA /* HomeControllerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C6B19A235AC6FC0020FFAA /* HomeControllerInteractor.swift */; };
 		67C6B19D235AD15D0020FFAA /* HomePhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C6B19C235AD15D0020FFAA /* HomePhotoCell.swift */; };
 		67C6B19F235AD55B0020FFAA /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C6B19E235AD55B0020FFAA /* PhotoService.swift */; };
@@ -48,6 +49,7 @@
 		671283F8235AC375008AA55D /* PhotopadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotopadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		671283FC235AC375008AA55D /* PhotopadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotopadTests.swift; sourceTree = "<group>"; };
 		671283FE235AC375008AA55D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		673697FF236235C8009EADEB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		67C6B19A235AC6FC0020FFAA /* HomeControllerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeControllerInteractor.swift; sourceTree = "<group>"; };
 		67C6B19C235AD15D0020FFAA /* HomePhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePhotoCell.swift; sourceTree = "<group>"; };
 		67C6B19E235AD55B0020FFAA /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67369800236235C8009EADEB /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +91,7 @@
 				671283E6235AC373008AA55D /* Photopad */,
 				671283FB235AC375008AA55D /* PhotopadTests */,
 				671283E5235AC373008AA55D /* Products */,
+				673697FE236235C7009EADEB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +120,14 @@
 				671283FE235AC375008AA55D /* Info.plist */,
 			);
 			path = PhotopadTests;
+			sourceTree = "<group>";
+		};
+		673697FE236235C7009EADEB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				673697FF236235C8009EADEB /* XCTest.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		67D78D6F23616FFB00A738CB /* Source */ = {
