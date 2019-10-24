@@ -14,6 +14,7 @@ struct ImageConstant {
 
 class HomeViewModel {
   private var container = [String: UIImage]()
+  // use this for thread safety
   private let queue = DispatchQueue(label: "com.home.photopad")
 
   init() {}
@@ -44,13 +45,18 @@ class HomeViewModel {
   }
 
   func updatePhoto(for key: String, with value: UIImage) {
-    container.updateValue(value, forKey: key)
+    queue.sync {
+      _ = self.container.updateValue(value, forKey: key)
+    }
   }
 
   func updateAll(with photos: [Photo]) {
-    container = [String: UIImage]()
-    photos.filter({ $0.url != nil }).forEach { elem in
-      queue.sync { self.container.updateValue(UIImage(), forKey: elem.url!) }
+    queue.sync {
+      self.container = [String: UIImage]()
+
+      photos.filter({ $0.url != nil }).forEach { elem in
+        self.container.updateValue(UIImage(), forKey: elem.url!)
+      }
     }
   }
 }

@@ -17,12 +17,21 @@ class HomeViewController: UICollectionViewController {
     let sb = UISearchBar(frame: .zero)
     sb.placeholder = "Search image.."
     sb.searchBarStyle = .prominent
+    sb.isTranslucent = true
+    sb.enablesReturnKeyAutomatically = true
     sb.barTintColor = .lightGray
     sb.sizeToFit()
     let textFieldInsideSearchBar = sb.value(forKey: "searchField") as? UITextField
     textFieldInsideSearchBar?.backgroundColor = UIColor.lightGray
     sb.delegate = self
     return sb
+  }()
+
+  private lazy var activityIndicator: UIActivityIndicatorView = {
+    let ai = UIActivityIndicatorView(style: .whiteLarge)
+    ai.color = .lightGray
+    ai.hidesWhenStopped = true
+    return ai
   }()
 
   override func loadView() {
@@ -36,6 +45,7 @@ class HomeViewController: UICollectionViewController {
     collectionView.register(UICollectionReusableView.self,
                             forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                             withReuseIdentifier: HomePhotoCellConstant.headerId)
+    setupView()
   }
 
   override func viewDidLoad() {
@@ -48,8 +58,17 @@ class HomeViewController: UICollectionViewController {
     collectionView.dataSource = self
     interactor.delegate = self
   }
-}
 
+  private func setupView() {
+    view.addSubview(activityIndicator)
+    activityIndicator.autolayout()
+
+    NSLayoutConstraint.activate([
+      activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+      activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+    ])
+  }
+}
 
 extension HomeViewController {
   override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -111,6 +130,7 @@ extension HomeViewController: UISearchBarDelegate {
       self.present(alert, animated: true, completion: nil)
     }
 
+    activityIndicator.startAnimating()
     interactor.searchPhotos(with: query)
   }
 }
@@ -118,12 +138,12 @@ extension HomeViewController: UISearchBarDelegate {
 
 // MARK: HomeViewInteractorProtocol
 extension HomeViewController: HomeViewInteractorProtocol {
-
   func didFinishFetching(photos: [Photo]) {
     // update the viewModel and reload collection
     // view
-    viewModel.updateAll(with: photos)
-    print(viewModel.urls)
+//    print(viewModel.urls)
+    self.viewModel.updateAll(with: photos)
+
     DispatchQueue.main.async {
       self.collectionView.reloadData()
     }
@@ -134,6 +154,10 @@ extension HomeViewController: HomeViewInteractorProtocol {
       self.viewModel.urls.forEach {
         self.interactor.loadImage(with: $0)
       }
+    }
+
+    DispatchQueue.main.async {
+      self.activityIndicator.stopAnimating()
     }
   }
 
