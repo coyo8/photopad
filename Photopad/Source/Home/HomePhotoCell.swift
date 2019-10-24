@@ -10,6 +10,7 @@ import UIKit
 
 public struct HomePhotoCellConstant {
   static let cellId = "com.homephotocell"
+  static let headerId = "com.homeheader"
 }
 
 class HomePhotoCell: UICollectionViewCell {

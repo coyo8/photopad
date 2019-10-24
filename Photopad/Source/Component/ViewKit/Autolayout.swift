@@ -28,3 +28,8 @@ extension UIView {
     NSLayoutConstraint.activate(constraints)
   }
 }
+
+
+extension UIColor {
+  static let lightRed = UIColor(red: 0.7569, green: 0.3765, blue: 0.3765, alpha: 1.0)
+}
