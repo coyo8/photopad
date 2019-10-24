@@ -20,6 +20,7 @@ class PhotoDetailCoordinator : BaseCoordinator {
 
   override func start() {
     let detailViewController = PhotoDetailViewController(photo: photo)
+    
     navigationController?.pushViewController(detailViewController, animated: true)
   }
 }

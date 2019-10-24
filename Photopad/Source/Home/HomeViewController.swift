@@ -29,7 +29,7 @@ class HomeViewController: UICollectionViewController {
 
   private lazy var activityIndicator: UIActivityIndicatorView = {
     let ai = UIActivityIndicatorView(style: .whiteLarge)
-    ai.color = .lightGray
+    ai.color = .lightRed
     ai.hidesWhenStopped = true
     return ai
   }()
@@ -67,6 +67,9 @@ class HomeViewController: UICollectionViewController {
     // setup the datasource
     collectionView.dataSource = self
     interactor.delegate = self
+
+    // populate some images
+    interactor.searchPhotos(with: "Ocean")
   }
 
   private func setupView() {
@@ -98,7 +101,9 @@ extension HomeViewController {
   }
 
   override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    
+    if let photo = viewModel.getPhotoAt(indexPath: indexPath) {
+      viewModel.didSelect?(photo)
+    }
   }
 }
 

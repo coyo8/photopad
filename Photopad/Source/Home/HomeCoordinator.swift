@@ -21,11 +21,22 @@ class HomeCoordinator : BaseCoordinator {
     let interactor = HomeControllerInteractor()
     let homeViewController = HomeViewController(viewModel: viewModel, interactor: interactor)
 
+    viewModel.didSelect = { [weak self] photo in
+      guard let this = self else { return }
+
+      this.showPhotoDetail(photo, in: this.navigationController)
+    }
+
+    viewModel.didTapBack = { [weak self] in
+      self?.isCompleted?()
+    }
+
     navigationController?.pushViewController(homeViewController, animated: true)
   }
 
   func showPhotoDetail(_ photo: UIImage, in navigationController: UINavigationController?) {
     let photoDetailCoordinator = PhotoDetailCoordinator(photo: photo, navigationController: navigationController)
     self.store(coordinator: photoDetailCoordinator)
+    photoDetailCoordinator.start()
   }
 }

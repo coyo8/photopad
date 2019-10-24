@@ -35,7 +35,7 @@ class PhotoDetailViewController: UIViewController {
     super.viewDidLoad()
 
     view.backgroundColor = .black
-    navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "baseline_save_white_24pt"), style: .plain,
+    navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action,
                                                         target: self,
                                                         action: #selector(handleSave))
     setupViews()
@@ -61,10 +61,11 @@ class PhotoDetailViewController: UIViewController {
       scrollView.topAnchor.constraint(equalTo: guide.topAnchor),
       scrollView.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
       scrollView.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
-      scrollView.bottomAnchor.constraint(equalTo: guide.bottomAnchor)
-    ])
+      scrollView.bottomAnchor.constraint(equalTo: guide.bottomAnchor),
 
-    photoImageView.toFit(scrollView)
+      photoImageView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
+      photoImageView.centerYAnchor.constraint(equalTo: scrollView.centerYAnchor)
+    ])
   }
 
   @objc private func handleSave() {

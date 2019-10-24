@@ -14,8 +14,10 @@ struct ImageConstant {
 
 class HomeViewModel {
   private var container = [String: UIImage]()
-  // use this for thread safety
   private let queue = DispatchQueue(label: "com.home.photopad")
+
+  var didSelect: ((UIImage) -> Void)?
+  var didTapBack: (() -> Void)?
 
   init() {}
 
@@ -59,6 +61,4 @@ class HomeViewModel {
       }
     }
   }
-
-  
 }

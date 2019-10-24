@@ -25,7 +25,7 @@
 		67D78F39236212F700A738CB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D78F38236212F700A738CB /* Coordinator.swift */; };
 		67D78F3B2362137000A738CB /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D78F3A2362137000A738CB /* RootCoordinator.swift */; };
 		67D78F3D236213E500A738CB /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D78F3C236213E500A738CB /* HomeCoordinator.swift */; };
-		67D78F3F236213FF00A738CB /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D78F3E236213FF00A738CB /* DetailCoordinator.swift */; };
+		67D78F3F236213FF00A738CB /* PhotoDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D78F3E236213FF00A738CB /* PhotoDetailCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +61,7 @@
 		67D78F38236212F700A738CB /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		67D78F3A2362137000A738CB /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		67D78F3C236213E500A738CB /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
-		67D78F3E236213FF00A738CB /* DetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
+		67D78F3E236213FF00A738CB /* PhotoDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,7 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				67D78F35236210C000A738CB /* PhotoDetailViewController.swift */,
-				67D78F3E236213FF00A738CB /* DetailCoordinator.swift */,
+				67D78F3E236213FF00A738CB /* PhotoDetailCoordinator.swift */,
 			);
 			path = DetailView;
 			sourceTree = "<group>";
@@ -308,7 +308,7 @@
 				67D78F302361977900A738CB /* ImageCache.swift in Sources */,
 				67D78F3B2362137000A738CB /* RootCoordinator.swift in Sources */,
 				67C6B19D235AD15D0020FFAA /* HomePhotoCell.swift in Sources */,
-				67D78F3F236213FF00A738CB /* DetailCoordinator.swift in Sources */,
+				67D78F3F236213FF00A738CB /* PhotoDetailCoordinator.swift in Sources */,
 				67D78F36236210C000A738CB /* PhotoDetailViewController.swift in Sources */,
 				671283E8235AC373008AA55D /* AppDelegate.swift in Sources */,
 				67C6B19B235AC6FC0020FFAA /* HomeControllerInteractor.swift in Sources */,
