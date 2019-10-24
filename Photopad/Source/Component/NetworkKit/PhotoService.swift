@@ -35,7 +35,7 @@ struct Constant {
 // This service handles the flickr requests
 public protocol PhotoService {
   func fetchPhotosURLs(with query: String,
-                       completion: @escaping (Result<String, NetworkError>) -> Void)
+                       completion: @escaping (Result<PhotoModel, NetworkError>) -> Void)
 }
 
 public final class PhotoServiceImp: PhotoService {
@@ -64,7 +64,7 @@ public final class PhotoServiceImp: PhotoService {
 
 
   public func fetchPhotosURLs(with query: String,
-                              completion: @escaping (Result<String, NetworkError>) -> Void) {
+                              completion: @escaping (Result<PhotoModel, NetworkError>) -> Void) {
 
     guard let url = getSearchUrl(with: query) else {
       completion(.failure(NetworkError.invalidURL))
@@ -72,8 +72,16 @@ public final class PhotoServiceImp: PhotoService {
     }
 
     let request = URLRequest(url: url, cachePolicy: .returnCacheDataElseLoad, timeoutInterval: 60.0)
-    let decoder: (Data) -> String = { data in
-      return String(data: data, encoding: .utf8)!
+
+    let decoder: (Data) throws -> PhotoModel = { data in
+      do {
+        let model = try JSONDecoder().decode(PhotoModel.self, from: data)
+        return model
+      } catch let error {
+        print(error)
+      }
+
+      throw NetworkError.decodingFailed
     }
 
     networkKit.send(request, decoder: decoder) { result in

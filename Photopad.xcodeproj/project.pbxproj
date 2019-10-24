@@ -12,13 +12,14 @@
 		671283EF235AC375008AA55D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 671283EE235AC375008AA55D /* Assets.xcassets */; };
 		671283F2235AC375008AA55D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 671283F0235AC375008AA55D /* LaunchScreen.storyboard */; };
 		671283FD235AC375008AA55D /* PhotopadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671283FC235AC375008AA55D /* PhotopadTests.swift */; };
-		67C6B19B235AC6FC0020FFAA /* HomeViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C6B19A235AC6FC0020FFAA /* HomeViewControllerDataSource.swift */; };
+		67C6B19B235AC6FC0020FFAA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C6B19A235AC6FC0020FFAA /* HomeViewModel.swift */; };
 		67C6B19D235AD15D0020FFAA /* HomePhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C6B19C235AD15D0020FFAA /* HomePhotoCell.swift */; };
 		67C6B19F235AD55B0020FFAA /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C6B19E235AD55B0020FFAA /* PhotoService.swift */; };
 		67C6B1A1235ADAA20020FFAA /* NetworkKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C6B1A0235ADAA20020FFAA /* NetworkKit.swift */; };
 		67D78F2C236187F900A738CB /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D78F2B236187F900A738CB /* Alerts.swift */; };
 		67D78F2E2361951F00A738CB /* Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D78F2D2361951F00A738CB /* Autolayout.swift */; };
 		67D78F302361977900A738CB /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D78F2F2361977900A738CB /* ImageCache.swift */; };
+		67D78F3223619E6A00A738CB /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D78F3123619E6A00A738CB /* PhotoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,13 +42,14 @@
 		671283F8235AC375008AA55D /* PhotopadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotopadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		671283FC235AC375008AA55D /* PhotopadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotopadTests.swift; sourceTree = "<group>"; };
 		671283FE235AC375008AA55D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		67C6B19A235AC6FC0020FFAA /* HomeViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerDataSource.swift; sourceTree = "<group>"; };
+		67C6B19A235AC6FC0020FFAA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		67C6B19C235AD15D0020FFAA /* HomePhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePhotoCell.swift; sourceTree = "<group>"; };
 		67C6B19E235AD55B0020FFAA /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
 		67C6B1A0235ADAA20020FFAA /* NetworkKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkKit.swift; sourceTree = "<group>"; };
 		67D78F2B236187F900A738CB /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		67D78F2D2361951F00A738CB /* Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Autolayout.swift; sourceTree = "<group>"; };
 		67D78F2F2361977900A738CB /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		67D78F3123619E6A00A738CB /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				67C6B19E235AD55B0020FFAA /* PhotoService.swift */,
 				67C6B1A0235ADAA20020FFAA /* NetworkKit.swift */,
 				67D78F2F2361977900A738CB /* ImageCache.swift */,
+				67D78F3123619E6A00A738CB /* PhotoModel.swift */,
 			);
 			path = NetworkKit;
 			sourceTree = "<group>";
@@ -148,7 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				67C6B19C235AD15D0020FFAA /* HomePhotoCell.swift */,
-				67C6B19A235AC6FC0020FFAA /* HomeViewControllerDataSource.swift */,
+				67C6B19A235AC6FC0020FFAA /* HomeViewModel.swift */,
 				671283E9235AC373008AA55D /* HomeViewController.swift */,
 			);
 			path = Home;
@@ -276,8 +279,9 @@
 				67D78F302361977900A738CB /* ImageCache.swift in Sources */,
 				67C6B19D235AD15D0020FFAA /* HomePhotoCell.swift in Sources */,
 				671283E8235AC373008AA55D /* AppDelegate.swift in Sources */,
-				67C6B19B235AC6FC0020FFAA /* HomeViewControllerDataSource.swift in Sources */,
+				67C6B19B235AC6FC0020FFAA /* HomeViewModel.swift in Sources */,
 				67D78F2C236187F900A738CB /* Alerts.swift in Sources */,
+				67D78F3223619E6A00A738CB /* PhotoModel.swift in Sources */,
 				67C6B1A1235ADAA20020FFAA /* NetworkKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

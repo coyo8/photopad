@@ -9,7 +9,6 @@
 import UIKit
 
 class HomeViewController: UICollectionViewController {
-  let dataSource = HomeViewControllerDataSource(model: [])
 
   override func loadView() {
     super.loadView()
@@ -26,7 +25,7 @@ class HomeViewController: UICollectionViewController {
     navigationItem.title = "Home"
 
     // setup the datasource
-    collectionView.dataSource = dataSource
+    collectionView.dataSource = self
     photos()
   }
 
@@ -44,3 +43,16 @@ class HomeViewController: UICollectionViewController {
   }
 }
 
+
+extension HomeViewController {
+  override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    return 10
+  }
+
+  override func collectionView(_ collectionView: UICollectionView,
+                      cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomePhotoCellConstant.cellId, for: indexPath)
+    cell.backgroundColor = .red
+    return cell
+  }
+}
