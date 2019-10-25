@@ -1,5 +1,5 @@
 # photopad
-A iOS app showing flickr photos with keyword search
+An iOS app showing flickr photos with keyword search
 
 ![overview](https://github.com/coyo8/photopad/blob/master/photopad.gif)
 
